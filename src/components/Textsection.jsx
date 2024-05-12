@@ -4,7 +4,7 @@ import Btn from './Btn'
 
 const Textsection = () => {
   return (
-    <div className='w-full h-full bg-[#ccea69]  py-32 px-14'>
+    <div className='w-full h-full  bg-[#ccea69]  py-32 px-14'>
         <div className='w-[80vw] '>
               <h1 className='text-[3.5vw] leading-none tracking-tight'>Ochi is a strategic partner for fast-grow­ing tech  businesses that need to raise funds, sell prod­ucts, ex­plain com­plex ideas, and hire great peo­ple. </h1>
         </div>
@@ -34,6 +34,7 @@ const Textsection = () => {
             <div>
                 <h1 className='text-[3.5vw] '>Our approach</h1>
                 <Btn value="Read More" clr="black"/>
+                <Btn value="Read More" />
             </div>
             <div className='w-[50vw] rounded-xl overflow-hidden'>
                   <img className='w-full h-full object-cover' src="https://ochi.design/wp-content/uploads/2022/05/Homepage-Photo-1326x939.jpg" alt="" />
