@@ -5,6 +5,7 @@ import Marque from './components/marque'
 import Textsection from './components/Textsection'
 import Play from './components/Play'
 import Featured from './components/Featured'
+import Clientreview from './components/Clientreview'
 
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
       <Textsection/>
       <Play/>
       <Featured/>
+      <Clientreview/>
     </div>
   )
 }
