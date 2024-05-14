@@ -1,8 +1,8 @@
-import React from "react";
-import Btn from "./Btn"
+import React, { useState } from "react";
+import Btn from "./Btn";
+import { easeInOut, motion } from "framer-motion";
 
 const Featured = () => {
-  
   const dataarray = [
     {
       id: "1",
@@ -33,6 +33,9 @@ const Featured = () => {
       tags: ["branded tamplate"],
     },
   ];
+
+  const [ishoverd, setishoverd] = useState("");
+  
   return (
     <div className="w-full h-fit bg-white pt-20">
       <h1 className="text-[3.5vw] leading-none tracking-tight px-14 border-b-2 pb-10 ">
@@ -42,13 +45,21 @@ const Featured = () => {
       <div className=" w-full h-fit mt-10 px-14 relative  ">
         {dataarray.map((item, index) => {
           return (
-            <div className="w-1/2 h-[45vw]  inline-block p-10  align-top relative ">
+            <div
+              onMouseEnter={() => setishoverd(index)}
+              onMouseLeave={() => setishoverd("")}
+              className="w-1/2 h-[45vw]  inline-block p-10  align-top relative "
+            >
               <div className=" flex gap-2 items-center ">
                 <div className="w-2 h-2 rounded-full bg-[#212121]"></div>
                 <h1 className="tracking-tighter uppercase">{item.nm}</h1>
               </div>
-              <div className="mt-2 mb-2">
-                <img className="rounded-xl" src={item.imageUrl} alt="" />
+              <div className={`group mt-2 mb-2 rounded-xl duration-700 hover:scale-90  overflow-hidden`}>
+                <img
+                  className="rounded-xl group-hover:scale-125 duration-500 "
+                  src={item.imageUrl}
+                  alt=""
+                />
               </div>
               <div className="flex items-center gap-2">
                 {item.tags.map((tag, index) => (
@@ -57,19 +68,34 @@ const Featured = () => {
                   </div>
                 ))}
               </div>
-              <div className={`absolute flex items-center justify-center  w-[50vw] top-[50%]  ${item.id % 2 == 0 ?"left-[-50%]":"right-[-50%]"} z-[999]  whitespace-nowrap  translate-y-[-50%] text-[8vw] font-bold tracking-tighter text-[#ccea69]`}>
-                {item.nm}
+              <div
+                className={`absolute flex items-center justify-center    w-[100vw] top-[50%]  ${
+                  item.id % 2 == 0 ? "left-[-100%]" : "right-[-100%]"
+                } z-[999] pointer-events-none  whitespace-nowrap overflow-hidden  translate-y-[-50%] text-[8vw] font-bold tracking-tighter text-[#ccea69]`}
+              >
+                <h1 className="">
+                  {item.nm.split("").map((item, inx) => (
+                    <motion.span
+                      initial={{ y: "100%" }}
+                      animate={ishoverd === index ? { y: "0" } : { y: "100%" }}
+                      transition={{
+                        ease: [0.22, 1, 0.36, 1],
+                        delay: inx * 0.07,
+                      }}
+                      className="inline-block pointer-events-none "
+                    >
+                      {item}
+                    </motion.span>
+                  ))}
+                </h1>
               </div>
             </div>
           );
-
-        
         })}
       </div>
 
       <div className="w-full flex items-center justify-center mt-10 mb-10">
-        <Btn value="view all case studeis" clr='black'/>
-
+        <Btn value="view all case studeis" clr="black" />
       </div>
     </div>
   );
