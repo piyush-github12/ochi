@@ -28,7 +28,7 @@ const Btn = (props) => {
             borderRadius: isHovered ? "10%" : "50%",
             transform: isHovered ? "translate(0%, 0%)" : "translate(0%, 100%)",
           }}
-          transition={{ duration: 0.6, ease: "easeInOut" }}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
           className={`absolute left-0 top-0 w-full h-full  ${
             props.clr === "black" ? "bg-white" : " bg-black"
           }   `}
@@ -43,7 +43,7 @@ const Btn = (props) => {
           <motion.div
             initial={{}}
             animate={{ scale: isHovered ? 5 : 1, rotate: isHovered ? -45 : 0 }}
-            transition={{ ease: "linear", duration: 0.3, delay: 0.2 }}
+            transition={{ ease: "linear", duration: 0.2, delay: 0.1 }}
             className={`w-2 h-2  ${
               props.clr === "black"
                 ? isHovered

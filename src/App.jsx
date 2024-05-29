@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Landingpage from './components/Landingpage'
 import Marque from './components/marque'
@@ -16,15 +16,24 @@ import LocomotiveScroll from "locomotive-scroll";
 
 const App = () => {
   
-const locomotiveScroll = new LocomotiveScroll({
-  el: document.querySelector("#main"),
-  smooth: true,
-  lerp: 2
-});
+useEffect(() => {
+  const scroll = new LocomotiveScroll({
+    el: document.querySelector("#main"), 
+    smooth: true,
+    smoothMobile: true,
+    lerp: 1, 
+    // multiplier: 5, 
+    easing: 0.5, 
+  });
+
+  return () => {
+    scroll.destroy();
+  };
+}, []);
 
 
   return (
-    <div id="main" data-scroll-container className="overflow-hidden ">
+    <div id="main"  className="overflow-hidden ">
       <Navbar />
       <Landingpage />
       <Marque />

@@ -2,6 +2,7 @@ import React from 'react'
 import coimg from "../assets/images/content-image01.jpg"
 import { FaArrowRight } from "react-icons/fa6";
 import { motion } from 'framer-motion';
+import Btn from './Btn';
 
 
 const Landingpage = () => {
@@ -15,12 +16,26 @@ const Landingpage = () => {
               <div className="ml-14">
                 <div className="flex items-center ">
                   {index === 1 && (
-                    <motion.div initial={{width:"0"}} whileInView={{ width:"12vw"}} transition={{delay: '0.7'}}  className="w-[0]] h-[8vw] rounded-lg overflow-hidden bg-red-500">
+                    <motion.div
+                      initial={{ width: "0" }}
+                      animate={{ width: "12vw" }}
+                      transition={{ delay: "0.7" }}
+                      className="w-[0]] h-[8vw] rounded-lg overflow-hidden bg-red-500"
+                    >
                       {/* <img className='w-full h-full' src='https://ochi.design/wp-content/uploads/2022/04/content-image01.jpg' alt="" /> */}
-                      <img src={coimg} alt="" className='w-[12vw] h-[8vw] object-cover ' />
+                      <img
+                        src={coimg}
+                        alt=""
+                        className="w-[12vw] h-[8vw] object-cover "
+                      />
                     </motion.div>
                   )}
-                  <motion.h1 initial={{y:"100%" }} animate={{y:"0"}}  className="font-extrabold text-[8vw] text-[#202021] uppercase leading-[6.6vw] tracking-tighter">
+                  <motion.h1
+                    initial={{ y: "100%" }}
+                    animate={{ y: "0" }}
+                    transition={{ delay: "0.2" }}
+                    className="font-extrabold text-[8vw] text-[#202021] uppercase leading-[6.6vw] tracking-tighter"
+                  >
                     {item}
                   </motion.h1>
                 </div>
@@ -40,14 +55,9 @@ const Landingpage = () => {
         ].map((item, index) => (
           <h1>{item}</h1>
         ))}
-        <div className="flex gap-2 ">
-          <button className="uppercase  border-2 border-black py-1 px-4 rounded-full text-md">
-            start the project
-          </button>
-          <div className="w-10 h-10 rounded-full border-2 border-black flex items-center justify-center -rotate-45">
-            <FaArrowRight />
-          </div>
-        </div>
+
+        <Btn value="START YOUR PROJECT" />
+        
       </div>
     </div>
   );
