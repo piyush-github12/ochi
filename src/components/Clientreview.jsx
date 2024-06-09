@@ -63,7 +63,7 @@ const Clientreview = () => {
     },
   ];
   return (
-    <div className="w-full h-fit bg-white px-14 py-16">
+    <div className="w-full h-fit bg-white px-14 py-16 max-md:pt-0 max-md:pb-40 max-md:px-5">
       <h1 className="text-[3.5vw] leading-none tracking-tight   pb-10">
         Client's Reviews
       </h1>
@@ -125,8 +125,8 @@ const Clientreview = () => {
         })}
       </motion.div>
 
-      <div className="w-full h-[25vw]  flex items-center mt-10 gap-5 ">
-        <div className="w-full h-full rounded-xl  bg-[#014d42] flex items-center justify-center ">
+      <div className="w-full h-[25vw] max-md:block flex items-center mt-10 gap-5 ">
+        <div className="w-full max-md:mb-5 h-full rounded-xl  bg-[#014d42] flex items-center justify-center ">
           <svg
             width="200"
             height="100"

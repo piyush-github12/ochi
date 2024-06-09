@@ -28,7 +28,7 @@ const Ready = () => {
 
   
   return (
-    <div className="w-full relative h-[100vh] bg-[#ccea69] ">
+    <div className="w-full relative h-[100vh] max-md:h-fit bg-[#ccea69] ">
       <div className="  w-full pt-20 text-center text-[12vw] leading-[11vw] uppercase font-extrabold  tracking-tighter text-[#202021]">
         {["ready", "to start", "the project?"].map((item) => {
           return (
@@ -51,7 +51,7 @@ const Ready = () => {
         <Btn value="hello@ochi.design" />
       </div>
 
-      <div className="absolute  w-[500px] h-[400px]  left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2  flex    ">
+      <div className="absolute max-md:scale-[0.5] w-[500px] h-[400px]  left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2  flex    ">
         <div
           data-scroll
           data-scroll-speed="0.2"

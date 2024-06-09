@@ -9,11 +9,11 @@ const Landingpage = () => {
 
   return (
     <div data-scroll data-scroll-section data-scroll-speed="-0.5" className="w-full h-screen pt-1">
-      <div  className="mt-52">
+      <div  className="mt-52 ">
         {["we create", "eye-opening", "presentation"].map((item, index) => {
           return (
             <>
-              <div className="ml-14">
+              <div className="ml-14 max-md:ml-5">
                 <div className="flex items-center ">
                   {index === 1 && (
                     <motion.div
@@ -34,7 +34,7 @@ const Landingpage = () => {
                     initial={{ y: "100%" }}
                     animate={{ y: "0" }}
                     transition={{ delay: "0.2" }}
-                    className="font-extrabold text-[8vw] text-[#202021] uppercase leading-[6.6vw] tracking-tighter"
+                    className="font-extrabold text-[8vw] max-md:text-[50px] max-md:leading-[45px] text-[#202021] uppercase leading-[6.6vw] tracking-tighter"
                   >
                     {item}
                   </motion.h1>
@@ -47,13 +47,13 @@ const Landingpage = () => {
       <div
         data-scroll
         data-scroll-speed=".2"
-        className="flex w-full items-center justify-between px-14 py-5 mt-52 border-t-2 border-black/50"
+        className="flex w-full max-md:px-2 items-center justify-between px-14 py-5 mt-52 border-t-2 border-black/50"
       >
         {[
           "For public and private companies",
           "From the first pitch of IPO",
         ].map((item, index) => (
-          <h1>{item}</h1>
+          <h1 className='max-md:text-[0.5rem]'>{item}</h1>
         ))}
 
         <Btn value="START YOUR PROJECT" />

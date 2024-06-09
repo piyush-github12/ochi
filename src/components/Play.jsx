@@ -29,20 +29,23 @@ const Play = () => {
 
   
   return (
-    <div className="relative  overflow-hidden  ">
-      <div data-scroll data-scroll-speed="-.7">
+    <div className="relative w-full h-fit overflow-hidden  ">
+      <div data-scroll >
         <img
           className="w-full h-full object-cover"
           src="https://ochi.design/wp-content/uploads/2022/05/Top-Viewbbcbv-1-scaled.jpg"
           alt=""
         />
-        <div className="absolute  w-[500px] h-[400px]  left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2  flex    ">
+        <div className="absolute  w-[500px] h-[400px] max-md:w-[200px] max-md:h-[100px]  left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2  flex    ">
           <div
             data-scroll
             data-scroll-speed="0.2"
-            className="w-[50%] h-full  flex items-center justify-center"
+            className="w-[50%] h-full   flex items-center justify-center"
           >
-            <div id='eye1' className="relative w-[200px] h-[200px] bg-white rounded-full flex items-center justify-center">
+            <div
+              id="eye1"
+              className="relative w-[200px] h-[200px] max-md:h-[100px] bg-white rounded-full flex items-center justify-center"
+            >
               <div
                 style={{ transform: `translate(${dx}px, ${dy}px` }}
                 className="relative  w-[70%] h-[70%] rounded-full bg-[#212020] "
@@ -67,7 +70,10 @@ const Play = () => {
             data-scroll-speed="0.2"
             className="w-[50%] h-full  flex items-center justify-center"
           >
-            <div id='eye2' className="relative w-[200px] h-[200px] bg-white rounded-full flex items-center justify-center">
+            <div
+              id="eye2"
+              className="relative w-[200px] h-[200px] max-md:h-[100px] bg-white rounded-full flex items-center justify-center"
+            >
               <div
                 style={{ transform: `translate(${dx}px, ${dy}px` }}
                 className="relative  w-[70%] h-[70%] rounded-full bg-[#212020] "

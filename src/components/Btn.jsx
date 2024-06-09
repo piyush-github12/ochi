@@ -6,7 +6,7 @@ const Btn = (props) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div div className="flex gap-5 items-center">
+    <div div className="flex gap-5 items-center  max-md:scale-[0.5]">
       <motion.div
         onHoverStart={() => setIsHovered(true)}
         onHoverEnd={() => setIsHovered(false)}

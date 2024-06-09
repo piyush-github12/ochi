@@ -2,8 +2,8 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className="w-full h-[100vh] flex items-center py-24 px-14">
-      <div className="relative w-1/2 h-full  text-[7vw] tracking-tighter leading-[6vw] uppercase font-extrabold text-[#202021] ">
+    <div className="w-full h-[100vh] max-md:h-fit flex max-md:block items-center py-24 px-14 max-md:px-10">
+      <div className="relative w-1/2 h-full max-md:mb-5 text-[7vw] tracking-tighter leading-[6vw] uppercase font-extrabold text-[#202021] ">
         <h1>Eye-</h1>
         <h1>opening</h1>
 
@@ -43,8 +43,8 @@ const Footer = () => {
             presentations
           </h1>
         </div>
-        <div className="w-full h-fit flex items-center">
-          <div className="w-1/2 h-fit  ">
+        <div className="w-full h-fit flex items-center max-md:items-start max-md:gap-10">
+          <div className="w-1/2 max-md:w-full h-fit  ">
             <div className="flex flex-col mt-10 ">
               <h3>S:</h3>
 
@@ -83,7 +83,7 @@ const Footer = () => {
               © ochi design 2024. Legal Terms
             </h3>
           </div>
-          <div className="w-1/2 h-fit">
+          <div className="w-1/2  h-fit">
             <div className="flex flex-col mt-10">
               <h3>M:</h3>
 
@@ -95,7 +95,7 @@ const Footer = () => {
                 "Insigts",
                 "Contact Us",
               ].map((item, index) => (
-                <a href="#" className="underline">
+                <a href="#" className="underline text-nowrap">
                   {item}
                 </a>
               ))}

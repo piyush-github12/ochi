@@ -42,13 +42,13 @@ const Featured = () => {
         Featured Projects
       </h1>
 
-      <div className=" w-full h-fit mt-10 px-14 relative  ">
+      <div className=" w-full h-fit mt-10 px-14 max-md:px-0 relative  ">
         {dataarray.map((item, index) => {
           return (
             <div
               onMouseEnter={() => setishoverd(index)}
               onMouseLeave={() => setishoverd("")}
-              className="w-1/2 h-[45vw]  inline-block p-10  align-top relative "
+              className="w-1/2 h-[45vw]  inline-block p-10 max-md:p-5  max-md:mb-5 align-top relative "
             >
               <div className=" flex gap-2 items-center ">
                 <div className="w-2 h-2 rounded-full bg-[#212121]"></div>
@@ -61,9 +61,9 @@ const Featured = () => {
                   alt=""
                 />
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 overflow-hidden">
                 {item.tags.map((tag, index) => (
-                  <div className="px-2 py-1 border-2 border-[#2121219a] rounded-full text-[0.7rem] whitespace-nowrap uppercase">
+                  <div className="px-2 py-1 max-md:px-[2px] max-md:py-[2px] border-2 border-[#2121219a] rounded-full text-[0.7rem] max-md:text-[1.5vw] whitespace-nowrap uppercase">
                     <div>{tag}</div>
                   </div>
                 ))}
