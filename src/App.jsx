@@ -21,6 +21,10 @@ useEffect(() => {
     el: document.querySelector("#main"), 
     smooth: true,
     smoothMobile: true,
+    mobile:{
+      smooth:true,
+      direction:true,
+    },
     lerp: 1, 
     // multiplier: 5, 
     easing: 0.5, 
